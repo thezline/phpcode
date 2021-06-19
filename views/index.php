@@ -16,19 +16,16 @@
     <?php include_once("layout/nav.php"); ?>
 
     <div class="center">
-        <!-- Card 1 -->
-
         <?php 
-	    foreach ($dato as $key => $value)
-	        foreach ($value as $va ):
-	            echo"<div class='card myContent' style='width: 18rem;'>";
-                echo"<div class='card-body'>";
-                echo"<h5 class='card-title'>Card title</h5>";
-                echo"<p class='card-text'>Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>";
-                echo"<a href='#' class='myButton'>Comprar</a>";
+	        foreach ($datos as $dato):
+	            echo"<div class='card' style='width: 18rem;'>";
+                echo    "<div class='card-body'>";
+                echo        "<h5 class='card-title'>" . $dato["name"] . "</h5>";
+                echo        "<p class='card-text'>". $dato["description"] ."</p>";
+                echo        "<a href='#' class='myButton'>Comprar</a>";
+                echo    "</div>";
                 echo"</div>";
-                 echo"</div>";
+                echo"<br />";
 	        endforeach;
 	    ?>
     </div>
