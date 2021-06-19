@@ -3,8 +3,8 @@
 *   Conexión a bbdd usando mysqli
 */
 
-class Connect{
-    public static function connection() {
+class Connection {
+    public static function conn() {
         $db = new mysqli("localhost", "root", "", "tienda");
         return $db;
     }
