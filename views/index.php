@@ -17,6 +17,7 @@
     <?php include_once("layout/nav.php"); ?>
 
     <div class="center">
+        <h1>Juegos</h1>
         <?php foreach ($datos as $dato): ?>
 	            <div class="card myContent" style="width: 18rem;">
                     <div class="card-body">
