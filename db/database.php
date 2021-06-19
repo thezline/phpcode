@@ -1,6 +1,6 @@
 <?php
 /**
-*   Conexión a bbdd usando mysqli
+*   Connection to MySQL using mysqli
 */
 
 class Connection {

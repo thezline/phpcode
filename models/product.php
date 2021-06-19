@@ -1,11 +1,11 @@
 <?php
 /**
-*   Modelo producto
+*   Product model
 */
 
 require_once("./db/database.php");
 
-class Product extends Connection
+class Product_Model extends Connection
 {
     private $db;
 
