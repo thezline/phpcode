@@ -5,8 +5,8 @@ Copy the folder in htdocs (xampp) or www (wamp) and start localhost in your brow
 Example:
 > http://localhost/[dir]
 
-Database query:
-```
+## Database query:
+```mysql
 CREATE DATABASE tienda;
 USE tienda;
 
@@ -47,4 +47,14 @@ INSERT INTO `products` (`name`, `category`, `description`, `price`) VALUES
 ('Assassin\'s Creed: Odyssey', 'History', 'Lorem ipsum dolor sit amet consectetur adipiscing elit hendrerit', 42),
 ('Detroit: Become Human', 'Science', 'Lorem ipsum dolor sit amet consectetur adipiscing elit hendrerit', 34),
 ('Halo Infinity', 'Science', 'Lorem ipsum dolor sit amet consectetur adipiscing elit hendrerit', 43);
+```
+## Config database
+db > database.php
+```php
+Connection {
+    public static function conn() {
+        $db = new mysqli("localhost", "root", "", "tienda");
+        return $db;
+    }
+}
 ```
