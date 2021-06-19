@@ -3,4 +3,4 @@
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
 <!-- Mis estilos -->
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="./views/assets/css/style.css">
