@@ -17,44 +17,20 @@
 
     <div class="center">
         <!-- Card 1 -->
-        <div class="card myContent" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="myButton">Comprar</a>
-            </div>
-        </div>
 
-        <!-- Card 2 -->
-        <div class="card myContent" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="myButton">Comprar</a>
-            </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="card myContent" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="myButton">Comprar</a>
-            </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="card myContent" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="myButton">Comprar</a>
-            </div>
-        </div>
+        <?php 
+	    foreach ($dato as $key => $value)
+	        foreach ($value as $va ):
+	            echo"<div class='card myContent' style='width: 18rem;'>";
+                echo"<div class='card-body'>";
+                echo"<h5 class='card-title'>Card title</h5>";
+                echo"<p class='card-text'>Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>";
+                echo"<a href='#' class='myButton'>Comprar</a>";
+                echo"</div>";
+                 echo"</div>";
+	        endforeach;
+	    ?>
     </div>
 </body>
 

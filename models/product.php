@@ -1,7 +1,8 @@
 <?php
+
 /**
-*   Product model
-*/
+ *   Product model
+ */
 
 require_once("./db/database.php");
 
