@@ -23,7 +23,7 @@
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $dato["name"] ?></h5>
                        <p class="card-text"><?php echo $dato["description"] ?></p>
-                       <p class="card-text">$<?php echo $dato["price"] ?></p>
+                       <h5>$<?php echo $dato["price"] ?></h5>
                        <a href="#" class="myButton">Comprar</a>
                 </div>
             </div>
