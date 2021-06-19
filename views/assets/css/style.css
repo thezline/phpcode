@@ -1,0 +1,29 @@
+/* Nuestros estilos custom */
+.myButton { 
+    background-color: #00a0d1;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.myContent {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 0.2rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.links {
+    text-decoration: none;
+}
