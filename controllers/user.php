@@ -1,7 +1,7 @@
 <?php
 
 /**
- *  Product controller
+ *  User controller
  */
 
 class User_Controller

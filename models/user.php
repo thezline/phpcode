@@ -1,1 +1,5 @@
 <?php
+
+/**
+ *   User model
+ */

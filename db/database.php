@@ -1,4 +1,5 @@
 <?php
+
 /**
 *   Connection to MySQL using mysqli
 */

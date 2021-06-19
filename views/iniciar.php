@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Importando los links desde php -->
+    <!-- Importing the custom styles -->
     <?php include_once("layout/links.php"); ?>
 
     <title>Iniciar Sesión</title>
 </head>
 
 <body>
-    <!-- Importando el nav desde php -->
+    <!-- Importing the nav bar -->
     <?php include_once("layout/nav.php"); ?>
 
     <div class="container">

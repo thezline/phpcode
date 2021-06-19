@@ -13,7 +13,7 @@ if (!empty($_REQUEST['m'])) {
     } else if (method_exists($user, $method)) {
         $user->$method();
     } else {
-        $user->index();
+        $product->index();
     }
 } else {
     $product->index();
