@@ -21,19 +21,21 @@ CREATE TABLE IF NOT EXISTS users (
 ) AUTO_INCREMENT = 100;
 
 CREATE TABLE IF NOT EXISTS products (
-	id int PRIMARY KEY AUTO_INCREMENT,
+	id int AUTO_INCREMENT,
     name VARCHAR(30) NOT NULL,
     category VARCHAR(30) NOT NULL,
     description VARCHAR(1000) NOT NULL,
-    price int NOT NULL
+    price int NOT NULL,
+    PRIMARY KEY (id)
 ) AUTO_INCREMENT = 100;
 
 CREATE TABLE IF NOT EXISTS orders (
-    id int PRIMARY KEY AUTO_INCREMENT,
+    id int AUTO_INCREMENT,
     fecha date NOT NULL,
     total int NOT NULL,
     id_user int,
     id_product int,
+    PRIMARY KEY (id),
     CONSTRAINT pk_user FOREIGN KEY (id_user) REFERENCES users (id),
     CONSTRAINT pk_product FOREIGN KEY (id_product) REFERENCES products (id)
 ) AUTO_INCREMENT = 100;
