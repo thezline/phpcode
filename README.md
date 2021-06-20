@@ -55,7 +55,7 @@ db > database.php
 ```php
 Connection {
     public static function conn() {
-        $db = new mysqli("localhost", "root", "", "tienda");
+        $db = new mysqli("server", "user", "password", "database");
         return $db;
     }
 }
