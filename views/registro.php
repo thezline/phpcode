@@ -16,27 +16,27 @@
     <?php include_once("layout/nav.php"); ?>
 
     <div class="container">
-        <form method="post" action="#">
+        <form method="post" action="?m=saveNewUser">
             <div class="mb-3">
                 <div class="row">
                     <div class="col">
                         <label for="name" class="form-label">Primer nombre</label>
-                        <input type="text" class="form-control" placeholder="Ej. John" aria-label="First name">
+                        <input name="name" type="text" class="form-control" placeholder="Ej. John" aria-label="First name">
                     </div>
                     <div class="col">
                         <label for="formGroupExampleInput" class="form-label">Primer apellido</label>
-                        <input type="text" class="form-control" placeholder="Ej. Smith" aria-label="Last name">
+                        <input name="last_name" type="text" class="form-control" placeholder="Ej. Smith" aria-label="Last name">
                     </div>
                 </div>
             </div>
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label">Correo</label>
-                <input class="form-control" type="email" placeholder="example@example.com" id="email" name="email"
+                <input name="email" class="form-control" type="email" placeholder="example@example.com" id="email" name="email"
                     required />
             </div>
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label">Contraseña</label>
-                <input class="form-control" type="password" placeholder="*********" id="password" name="password"
+                <input name="password" class="form-control" type="password" placeholder="*********" id="password" name="password"
                     required />
             </div>
             <div class="mb-3">

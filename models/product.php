@@ -6,17 +6,14 @@
 
 require_once("./db/database.php");
 
-class Product_Model extends Connection
-{
+class Product_Model extends Connection {
     private $db;
 
-    public function __construct()
-    {
+    public function __construct() {
         $this->db = Connection::conn();
     }
 
-    public function get_products()
-    {
+    public function get_products() {
         $query = "SELECT * FROM products";
 
         foreach ($this->db->query($query) as $res) {

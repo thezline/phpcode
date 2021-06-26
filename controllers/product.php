@@ -18,9 +18,7 @@ class Product_Controller
   // Get all the products
   function index()
   {
-    $producto = new Product_Model();
-    $datos = $producto->get_products();
-
+    $datos = $this->model->get_products();
     require_once("./views/index.php");
   }
 }

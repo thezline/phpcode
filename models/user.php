@@ -4,10 +4,10 @@
  *   User model
  */
 
-include_once("./db/database.php");
+require_once("./db/database.php");
 
 class User_Model extends Connection {
-    public $db;
+    private $db;
 
     public function __construct() {
         $this->db = Connection::conn();
@@ -16,14 +16,16 @@ class User_Model extends Connection {
     public function save($name, $last_name, $email, $password) {
         $passwordEncrypted = password_hash($password, PASSWORD_DEFAULT);
 
-        $query = "INSERT INTO users(name, last_name, email, password) 
-            values(:name, :last_name, :email, :password)";
+        $query = "INSERT INTO users (name, last_name, email, pass, createdAt) 
+            values (:name, :last_name, :email, :pass, :createdAt)";
 
         $sql = $this->db->prepare($query);
-        $sql->bindParam(':name', $name, PDO::PARAM_STR, 30);
-        $sql->bindParam(':last_name', $last_name, PDO::PARAM_STR, 30);
-        $sql->bindParam(':email', $email, PDO::PARAM_STR, 100);
-        $sql->bindParam(':password', $passwordEncrypted, PDO::PARAM_STR, 100);
+
+        $sql->bind_param(":name", $name);
+        $sql->bind_param(":last_name", $last_name);
+        $sql->bind_param(":email", $email);
+        $sql->bind_param(":pass", $passwordEncrypted);
+        $sql->bind_param(":createdAt", date("Y-m-d"));
 
         $sql->execute();
     }
