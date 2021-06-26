@@ -11,17 +11,17 @@ CREATE DATABASE tienda;
 USE tienda;
 
 CREATE TABLE IF NOT EXISTS users (
-    id int AUTO_INCREMENT,
+    id int AUTO_INCREMENT UNIQUE,
     name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    pass VARCHAR(30) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    pass VARCHAR(150) NOT NULL,
     createdAt date NOT NULL,
     PRIMARY KEY (id, email)
 ) AUTO_INCREMENT = 100;
 
 CREATE TABLE IF NOT EXISTS products (
-	id int AUTO_INCREMENT,
+	id int AUTO_INCREMENT UNIQUE,
     name VARCHAR(30) NOT NULL,
     category VARCHAR(30) NOT NULL,
     description VARCHAR(1000) NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS products (
 ) AUTO_INCREMENT = 100;
 
 CREATE TABLE IF NOT EXISTS orders (
-    id int AUTO_INCREMENT,
+    id int AUTO_INCREMENT UNIQUE,
     fecha date NOT NULL,
     total int NOT NULL,
     id_user int,

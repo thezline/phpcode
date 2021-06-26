@@ -15,18 +15,21 @@ class User_Model extends Connection {
 
     public function save($name, $last_name, $email, $password) {
         $passwordEncrypted = password_hash($password, PASSWORD_DEFAULT);
+        $date = date("Y-m-d");
 
         $query = "INSERT INTO users (name, last_name, email, pass, createdAt) 
-            values (:name, :last_name, :email, :pass, :createdAt)";
+                values (?, ?, ?, ?, ?)";
 
-        $sql = $this->db->prepare($query);
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param("sssss", $name, $last_name, $email, $passwordEncrypted, $date);
+        return $stmt->execute();
+    }
 
-        $sql->bind_param(":name", $name);
-        $sql->bind_param(":last_name", $last_name);
-        $sql->bind_param(":email", $email);
-        $sql->bind_param(":pass", $passwordEncrypted);
-        $sql->bind_param(":createdAt", date("Y-m-d"));
+    public function delete($id) {
+        $query = "DELETE FROM users WHERE id = ?";
 
-        $sql->execute();
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param("s", $id);
+        return $stmt->execute();
     }
 }

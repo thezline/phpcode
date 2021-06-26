@@ -6,13 +6,11 @@
 
 class Connection {
     protected static function conn() {
-        $db = new mysqli("localhost", "root", "", "tienda");
-
-        if (mysqli_connect_errno()) {
-            printf("Connect failed: %s\n", mysqli_connect_error());
-            exit();
+        try {
+            $db = new mysqli("localhost", "root", "", "tienda");
+            return $db;
+        } catch (Exception $e) {
+            echo $e->getMessage();
         }
-        
-        return $db;
     }
 }

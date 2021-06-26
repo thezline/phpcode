@@ -15,23 +15,29 @@ class User_Controller
     }
     
     // Get login route
-    function login() {
+    public function login() {
         require_once("./views/registro.php");
     }
 
     // Get register route
-    function register() {
+    public function register() {
         require_once("./views/iniciar.php");
     }
 
-    function saveNewUser() {
-        $name = $_REQUEST["name"];
-        $last_name = $_REQUEST["last_name"];
-        $email = $_REQUEST["email"];
-        $password = $_REQUEST["password"];
+    public function saveNewUser() {
+        $name = $_POST["name"];
+        $last_name = $_POST["last_name"];
+        $email = $_POST["email"];
+        $password = $_POST["password"];
 
-        $result = $this->model->save($name, $last_name, $email, $password);
+        $this->model->save($name, $last_name, $email, $password);
+        header("location: " . urlsite);
+    }
 
+    public function deleteUser() {
+        $id = $_POST["id"];
+
+        $this->model->delete($id);
         header("location: " . urlsite);
     }
 }

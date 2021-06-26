@@ -1,4 +1,5 @@
 <?php
+include_once("./config.php");
 include_once("./controllers/product.php");
 include_once("./controllers/user.php");
 
