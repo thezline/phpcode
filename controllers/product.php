@@ -6,18 +6,15 @@
 
 require_once("./models/product.php");
 
-class Product_Controller
-{
+class Product_Controller {
   private $model;
 
-  function __construct()
-  {
+  function __construct() {
     $this->model = new Product_Model();
   }
 
   // Get all the products
-  function index()
-  {
+  public function index() {
     $datos = $this->model->get_products();
     require_once("./views/index.php");
   }

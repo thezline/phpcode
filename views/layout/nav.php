@@ -11,23 +11,23 @@
                     <a class="nav-link" aria-current="page" href="?m=registerView">Registro</a>
                 </li>
                 <?php
-                session_start();
+                    session_start();
 
-                if (!empty($_SESSION["name"])) {
-                    echo "";
-                } else {
-                    echo
-                        "<li class='nav-item'>
-                            <a class='nav-link' href='?m=loginView'>Inicar Sesión</a>
-                        </li>";
-                }
-                
-                if (!empty($_SESSION["name"])) {
-                    echo
-                        "<li class='nav-item'>
-                            <a class='nav-link' href='?m=close'>Cerrar Sesión</a>
-                        </li>";
-                }
+                    if (!empty($_SESSION["name"])) {
+                        echo "";
+                    } else {
+                        echo
+                            "<li class='nav-item'>
+                                <a class='nav-link' href='?m=loginView'>Inicar Sesión</a>
+                            </li>";
+                    }
+                    
+                    if (!empty($_SESSION["name"])) {
+                        echo
+                            "<li class='nav-item'>
+                                <a class='nav-link' href='?m=close'>Cerrar Sesión</a>
+                            </li>";
+                    }
                 ?>
             </ul>
         </div>

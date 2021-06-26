@@ -19,6 +19,3 @@ if (!empty($_REQUEST['m'])) {
 } else {
     $product->index();
 }
-
-
-
