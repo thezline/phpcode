@@ -16,15 +16,15 @@
     <?php include_once("layout/nav.php"); ?>
 
     <div class="container">
-        <form method="post" action="#">
+        <form method="post" action="?m=userLogin">
             <div class="mb-3">
                 <label for="name" class="form-label">Correo</label>
-                <input class="form-control" type="email" placeholder="example@example.com" id="email" name="email" required />
+                <input name="email" class="form-control" type="email" placeholder="example@example.com" id="email" name="email" required />
             </div>
 
             <div class="mb-3">
                 <label for="name" class="form-label">Contraseña</label>
-                <input class="form-control" type="password" placeholder="*********" id="password" name="password" required />
+                <input name="password" class="form-control" type="password" placeholder="*********" id="password" name="password" required />
             </div>
 
             <div class="mb-2">

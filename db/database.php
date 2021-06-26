@@ -7,7 +7,7 @@
 class Connection {
     protected static function conn() {
         try {
-            $db = new mysqli("localhost", "root", "", "tienda");
+            $db = new mysqli(server, user, password, database);
             return $db;
         } catch (Exception $e) {
             echo $e->getMessage();

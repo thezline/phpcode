@@ -17,7 +17,15 @@
     <?php include_once("layout/nav.php"); ?>
 
     <div class="center">
-        <h1>Juegos</h1>
+        <h1>
+            <?php 
+                if(!empty($_SESSION["name"])) {
+                    echo "Es hora de comprar " . $_SESSION["name"];
+                } else {
+                    echo "Juegos";
+                }
+            ?>
+        </h1>
         <?php foreach ($datos as $dato): ?>
 	            <div class="card myContent" style="width: 18rem;">
                     <div class="card-body">
