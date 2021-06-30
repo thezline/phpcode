@@ -51,12 +51,15 @@ INSERT INTO `products` (`name`, `category`, `description`, `price`) VALUES
 ('Halo Infinity', 'Science', 'Lorem ipsum dolor sit amet consectetur adipiscing elit hendrerit', 43);
 ```
 ## Config database
-db > database.php
+root dir > config.php
 ```php
-Connection {
-    public static function conn() {
-        $db = new mysqli("server", "user", "password", "database");
-        return $db;
-    }
-}
+/**
+ * Global and constant values
+ */
+
+define("urlsite",'http://localhost/finished/');
+define("server",'');
+define("user",'');
+define("password",'');
+define("database",'');
 ```
